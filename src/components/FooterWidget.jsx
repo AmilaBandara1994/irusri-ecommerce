@@ -1,26 +1,7 @@
 import { Col, Row } from 'antd';
 import { Avatar, List, Tag } from 'antd';
+import { featured } from '../assets/data';
 
-const featured = [
-    {
-    //   image: require('../../assets/images/img-footer1.jpg'),
-      title: 'Kelloggs Crunchy Nut Hazelnut',
-      cost: '1402.50',
-      link: 'https://www.google.com/'
-    },
-    {
-    //   image: require('../../assets/images/img-footer2.jpg'),
-      title: 'Branston Baked Beans in a Rich',
-      cost: '1200.50',
-      link: 'https://www.google.com/'
-    },
-    {
-    //   image: require('../../assets/images/img-footer3.jpg'),
-      title: 'Breeze Toilet Tissue Soft White 24 Roll',
-      cost: '2100.50',
-      link: 'https://www.google.com/'
-    },
-  ];
 
   const data = [
     'Racing car sprays burning fuel into crowd.',
@@ -31,6 +12,7 @@ const featured = [
   ];
 
 const FooterWidget = () => {
+
   return (
     <div className="footerWidget">
         <div className="container">
@@ -42,11 +24,12 @@ const FooterWidget = () => {
                     itemLayout="horizontal"
                     dataSource={featured}
                     renderItem={(item) => (
-                    <List.Item>
+                    <List.Item >
                         <List.Item.Meta
+                          style={{ color: '#ffffff' }}
                         avatar={<Avatar src={item.image} />}
-                        title={<a href={item.link}>{item.title}</a>}
-                        description={item.cost}
+                        title={<a  style={{ color: '#ffffff' }} href={item.link}>{item.title}</a>}
+                        description={<span style={{ color: '#ffffff' }}>$ {item.cost}</span>}
                         />
                     </List.Item>
                     )}
@@ -60,11 +43,12 @@ const FooterWidget = () => {
                     itemLayout="horizontal"
                     dataSource={featured}
                     renderItem={(item) => (
-                    <List.Item>
+                    <List.Item >
                         <List.Item.Meta
+                          style={{ color: '#ffffff' }}
                         avatar={<Avatar src={item.image} />}
-                        title={<a href={item.link}>{item.title}</a>}
-                        description={item.cost}
+                        title={<a  style={{ color: '#ffffff' }} href={item.link}>{item.title}</a>}
+                        description={<span style={{ color: '#ffffff' }}>$ {item.cost}</span>}
                         />
                     </List.Item>
                     )}

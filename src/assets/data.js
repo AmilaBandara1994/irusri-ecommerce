@@ -139,5 +139,27 @@ export  const  products= [
     sale: '1200.50'
   }
   ]
+
+
+  export const featured = [
+    {
+      image: images.mca2024,
+      title: 'Kelloggs Crunchy Nut Hazelnut',
+      cost: '1402.50',
+      link: 'https://www.google.com/'
+    },
+    {
+      image: images.galaxyBook,
+      title: 'Branston Baked Beans in a Rich',
+      cost: '1200.50',
+      link: 'https://www.google.com/'
+    },
+    {
+      image: images.headsetlogo,
+      title: 'Breeze Toilet Tissue Soft White 24 Roll',
+      cost: '2100.50',
+      link: 'https://www.google.com/'
+    },
+  ];
   
   

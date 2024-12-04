@@ -69,6 +69,16 @@
     height: 100vh;
   }
 
+  /* Cost calculation */
+  .costCalculation{
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center; */
+
+  }
+
   /* topbar */
   .topBar {
     position: relative;

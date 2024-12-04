@@ -37,6 +37,12 @@ const Cart = () => {
     },
   ];
 
+  let totalPrice = 0;
+  let shippingPrice = 0;
+  let tax = 0;
+  let discount =0;
+
+
   const remove = (key)=>{
     removeFromCart(key);
   }
@@ -56,8 +62,13 @@ const Cart = () => {
           </Dropdown>
         </div>
         <Row gutter={24}>
-          {product.map((product) => (
-            <Col lg={4} key={product.key}>
+          {product.map((product) => {
+            
+            totalPrice += product.count * parseFloat(product.price);
+            shippingPrice += product.count * 20;
+            tax += product.price * 0.10 * product.count;
+          
+           return ( <Col lg={4} key={product.key}>
               <div className="content">
                 <span className='close'onClick={() => remove(product.key)}><CloseCircleOutlined /></span>
                 <div className="image">
@@ -65,9 +76,29 @@ const Cart = () => {
                 </div>
                 <h3>{product.title}</h3>
                 <p>${product.price}</p>
+                <p>Count : {product.count}</p>
               </div>
-            </Col>
-          ))}
+            </Col>);})  
+          
+          }
+        </Row>
+        <Row gutter={24}>
+          <Col md={6}>
+          </Col>
+          <Col md={6}>
+          </Col>
+          <Col md={6}>
+          </Col>
+          <Col md={6}>
+            <div className='costCalculation' >
+
+              <h3> total amount: <span>${totalPrice}</span></h3>
+              <h3> shipping cost:<span> ${shippingPrice}</span></h3>
+              <h3> Discount: <span>-$ {discount}</span></h3>
+              <h3> Tax:<span> ${tax}</span></h3>
+              <h3> Estimated Total:<span>${totalPrice+shippingPrice+tax-discount} </span></h3>
+            </div>
+          </Col>
         </Row>
       </div>
     </div>

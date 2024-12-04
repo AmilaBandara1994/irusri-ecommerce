@@ -5,36 +5,36 @@ import { Button } from 'antd';
 import { images, products } from '../assets/data';
 import { useAuth } from '../context/AuthContext';
 
-const saleProducts = [
-    {
-      key: '1',
-      image: images.galaxyBook,
-      title: "SAMSUNG Galaxy Note book",
-      salePrice: '4502.00',
-      price: '4002.00'
-    },
-    {
-      key: '2',
-      image: images.mac2016,
-      title: 'Apple MacBook Air - 2020',
-      salePrice: '1500.50',
-      price: '1200.50'
-    },
-    {
-      key: '3',
-      image: images.macpro,
-      title: 'Apple MacBook Pro - 2024',
-      salePrice: '1900.70',
-      price: '1500.70'
-    },
-    {
-      key: '4',
-      image: images.mca2024,
-      title: 'Apple MacBook Air - 2024',
-      salePrice: '1700.50',
-      price: '1400.50'
-    }
-  ]
+// const saleProducts = [
+//     {
+//       key: '1',
+//       image: images.galaxyBook,
+//       title: "SAMSUNG Galaxy Note book",
+//       salePrice: '4502.00',
+//       price: '4002.00'
+//     },
+//     {
+//       key: '2',
+//       image: images.mac2016,
+//       title: 'Apple MacBook Air - 2020',
+//       salePrice: '1500.50',
+//       price: '1200.50'
+//     },
+//     {
+//       key: '3',
+//       image: images.macpro,
+//       title: 'Apple MacBook Pro - 2024',
+//       salePrice: '1900.70',
+//       price: '1500.70'
+//     },
+//     {
+//       key: '4',
+//       image: images.mca2024,
+//       title: 'Apple MacBook Air - 2024',
+//       salePrice: '1700.50',
+//       price: '1400.50'
+//     }
+//   ]
 
 
 const SaleProducts = () => {

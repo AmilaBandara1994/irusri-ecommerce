@@ -50,8 +50,8 @@ const AppHeader = () => {
             <li><a href="https://www.youtube.com"><YoutubeFilled /></a></li>
             <li><Link to="/cart"> 
             
-             <Badge count={12}>
-                <ShoppingCartOutlined />
+             <Badge count={authUser ? authUser.cart.length : 0} overflowCount={99}>
+                <ShoppingCartOutlined style={{ fontSize: '35px', color: 'white' }} />
              </Badge>
 
             </Link></li>
@@ -73,12 +73,11 @@ const AppHeader = () => {
         </div>
       </div>
               <div className="header separator">
-        <div className="logo">E-Commerce</div>
+        <div className="logo"> <Link to="/home"> E-Commerce </Link></div>
 
         <nav>
           <ul>
             <li><Link to="/home">Home</Link></li>
-            <li><Link to="/products">Products</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/faq">FAQ</Link></li>
             <li><Link to="/contact">Contact</Link></li>
