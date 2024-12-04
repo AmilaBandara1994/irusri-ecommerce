@@ -8,25 +8,7 @@ const Login = () => {
   const {  users,login, setAuthUser, isLoggedIn, setIsLoggedIn} = useAuth();
 
   const onFinish = (values)=>{
-    // users.map((user) =>{
-    //         if(user.email === values.email && user.password === values.password){
-    //           setAuthUser({
-    //             username: user.username,
-    //             email: user.email,
-    //             password: user.password,
-    //             cart: user.cart
-    //           })
-    //           setIsLoggedIn(true);
-    //           navigate('/home');
-    //         }
-            
-    //         if(isLoggedIn){
-    //           setError("")
-    //         }else{
-    //           setError("Login failed!. Username or Password incorrect.")
-    //         }
-    //       })    
-    login(values.email, values.password)
+      login(values.email, values.password)
   }
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);

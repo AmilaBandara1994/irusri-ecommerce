@@ -1,16 +1,16 @@
-import {MobileOutlined,ShoppingCartOutlined, MailOutlined,FacebookFilled, InstagramFilled,YoutubeFilled, UserOutlined } from '@ant-design/icons';
+import {MobileOutlined,ShoppingCartOutlined , MailOutlined,FacebookFilled, InstagramFilled,YoutubeFilled, UserOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
-import { Button, Dropdown } from 'antd';
+import { Button, Dropdown, Badge  } from 'antd';
 import { useAuth } from '../../context/AuthContext';
 
 
 
 
 const AppHeader = () => {
-  const { isLoggedIn, authUser,setIsLoggedIn } = useAuth();
+  const { isLoggedIn,logout, authUser,setIsLoggedIn } = useAuth();
 
   const logOut = () => {
-    setIsLoggedIn(false)
+    logout();
   }
 
   const items = [
@@ -48,7 +48,14 @@ const AppHeader = () => {
             <li><a href="https://www.facebook.com"><FacebookFilled /></a></li>
             <li><a href="https://www.instergram.com"><InstagramFilled /></a></li>
             <li><a href="https://www.youtube.com"><YoutubeFilled /></a></li>
-            <li><Link to="/cart"><ShoppingCartOutlined  style={{ fontSize: '40px', }} /></Link></li>
+            <li><Link to="/cart"> 
+            
+             <Badge count={12}>
+                <ShoppingCartOutlined />
+             </Badge>
+
+            </Link></li>
+            {/* <li><Link to="/cart"><ShoppingCartOutlined  style={{ fontSize: '40px', }} /><span>{'0'}</span></Link></li> */}
           {/* <ShoppingCartOutlined  style={{ fontSize: '40px', }} /> */}
           </ul>
           <div className='alignCenter'>
@@ -60,8 +67,7 @@ const AppHeader = () => {
               arrow
             >
       
-              <Button><UserOutlined /> { isLoggedIn ? authUser.username :"user"
-               }</Button>
+              <Button><UserOutlined />  { isLoggedIn ? authUser.username :"user"      }</Button>
           </Dropdown>
       </div>
         </div>

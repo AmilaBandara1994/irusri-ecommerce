@@ -1,26 +1,22 @@
 import { Col, Row } from 'antd';
-
-import huawei from '../assets/images/Huawei-Logo.png';
-import lenovo from '../assets/images/Lenovo-Logo.png';
-import samsung from '../assets/images/samsung-brand.png';
-import apple from '../assets/images/Apple-Logo.png';
+import { images } from '../assets/images/images';
 
 const brands = [
     {
       key: '1',
-      image: huawei,
+      image: images.huawei,
     },
     {
       key: '2',
-      image: lenovo,
+      image: images.lenovo,
     },
     {
       key: '3',
-      image: samsung,
+      image: images.samsung,
     },
     {
       key: '4',
-      image: apple,
+      image: images.apple,
     }
   ]
 

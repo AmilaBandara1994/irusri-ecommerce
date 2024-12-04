@@ -1,21 +1,22 @@
 import { Col, Row } from 'antd';
 
-// import { productCategories } from "../assets/data"
-import image1 from '../assets/images/img1.jpg'
+import { images } from '../assets/images/images';
 
 const productCategories = [
     {
       key: '1',
-      image: image1,
+      image: images.laplogo,
       title: 'Laptop'
     },
     {
       key: '2',
+      image: images.phoneLogo,
       title: 'Smart Phone'
     },
     {
       key: '3',
-      title: 'Headset'
+      image: images.headsetlogo,
+      title: 'Headsets'
     }
   ]
   

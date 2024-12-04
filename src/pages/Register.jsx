@@ -2,7 +2,7 @@
 import { Button, Form, Input } from 'antd';
 import { useAuth } from '../context/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
-import Cart from './Cart';
+// import Cart from './Cart';
 
 const Register = () => {
 
@@ -10,17 +10,8 @@ const Register = () => {
   const { register} = useAuth();
 
   const onFinish = (values)=>{
-    // setUsers((prevAuthUser)=> [...prevAuthUser ,{
-    //   username: values.username,
-    //   email: values.email,
-    //   password: values.password,
-    //   cart:[]
-    // }]);
-    register(values)
-    
-    navigate('/login');
-    console.log(values);
-    
+     register(values)
+    navigate('/login');    
   }
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);

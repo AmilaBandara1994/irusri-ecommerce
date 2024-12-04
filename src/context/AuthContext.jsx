@@ -42,7 +42,7 @@ export function AuthProvider(props){
         if (users.some((user) => user.email === newUser.email)) {
             alert('User with this email already exists!');
         } else {
-            setUsers((prevUsers) => [...prevUsers, newUser]);
+            setUsers((prevUsers) => [...prevUsers, { ...newUser, cart: [] }]);
         }
     };
 
@@ -52,6 +52,66 @@ export function AuthProvider(props){
         localStorage.removeItem('authUser');
         localStorage.setItem('isLoggedIn', false);
     };
+
+    // const addToCart = (product) => {
+    //     if (!authUser) {
+    //         alert('You need to log in to add items to the cart!');
+    //         return;
+    //     }
+    //     // const productIndex = authUser.cart.findIndex((item) => item.key === product.key);
+    //     const updatedCart = [...authUser.cart, product];
+    //     setAuthUser({ ...authUser, cart: updatedCart });
+
+    //     setUsers((prevUsers) =>
+    //         prevUsers.map((user) =>
+    //             user.email === authUser.email ? { ...user, cart: updatedCart } : user
+    //         )
+    //     );
+    // };
+
+    const addToCart = (product) => {
+        if (!authUser) {
+            alert('You need to log in to add items to the cart!');
+            return;
+        }
+        const productIndex = authUser.cart.findIndex((item) => item.key === product.key);
+        let updatedCart;
+        if (productIndex > -1) {
+            updatedCart = authUser.cart.map((item, index) =>
+                index === productIndex ? { ...item, count: (item.count || 1) + 1 } : item
+            );
+        } else {
+            updatedCart = [...authUser.cart, { ...product, count: 1 }];
+        }
+        setAuthUser({ ...authUser, cart: updatedCart });
+        setUsers((prevUsers) =>
+            prevUsers.map((user) =>
+                user.email === authUser.email ? { ...user, cart: updatedCart } : user
+            )
+        );
+    };
+
+    const removeFromCart = (productKey) => {
+        if (!authUser) {
+            alert('You need to log in to manage your cart!');
+            return;
+        }
+    
+        const updatedCart = authUser.cart.map((item) => {
+            if (item.key === productKey) {
+                return item.count > 1 ? { ...item, count: item.count - 1 } : null;
+            }
+            return item;
+        }).filter((item) => item !== null);
+    
+        setAuthUser({ ...authUser, cart: updatedCart });
+        setUsers((prevUsers) =>
+            prevUsers.map((user) =>
+                user.email === authUser.email ? { ...user, cart: updatedCart } : user
+            )
+        );
+    };
+    
 
     const value = {
         users,
@@ -63,6 +123,8 @@ export function AuthProvider(props){
         login,
         register,
         logout,
+        addToCart,
+        removeFromCart
     }
 
     return (
