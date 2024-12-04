@@ -1,0 +1,31 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Product A",
+        "price": 25.0,
+        "stock": 50
+      },
+      {
+        "id": 2,
+        "name": "Product B",
+        "price": 40.0,
+        "stock": 30
+      }
+    ],
+    "users": [
+      {
+        "id": 1,
+        "username": "amila",
+        "email": "amila@example.com",
+        "role": "admin"
+      },
+      {
+        "id": 2,
+        "username": "prasad",
+        "email": "prasad@example.com",
+        "role": "user"
+      }
+    ]
+  }
+  
