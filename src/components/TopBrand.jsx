@@ -30,7 +30,7 @@ const TopBrand = () => {
                 brands.map( brand => (
                     <Col xs={{ span: 12 }} sm={{ span: 6 }} key={brand.key} >
                         <div className="content">
-                            <div className="image">
+                            <div className="ima">
                                 <img src={brand.image} alt="product" />
                             </div>
                             <h3>{brand.title}</h3>

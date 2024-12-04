@@ -55,10 +55,11 @@ const SaleProducts = () => {
                             <div className="image">
                                 <img src={product.image} alt="product" />
                             </div>
-                            <h3>{product.title}</h3>
+                            <h3 className='productTitle'>{product.title}</h3>
+                            <p className='productDesc'>{product.description}</p>
                             <div className="price">
-                              <span className='salePrice'>${product.salePrice}</span>
-                                ${product.price}
+                              <span className='salePrice'>${product.price}</span>
+                                ${product.sale}
                             </div>
                             <Button type="primary" onClick={() => addToCartfn(product)}>Add to Cart</Button>
                         </div>

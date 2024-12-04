@@ -59,6 +59,9 @@ If you have not registered, use the link provided for new registrations. Upon su
 
 2. Login
 After successful login, you will be redirected to the home page, where you can see all the products categorized accordingly (sales and recent products). You can add any product to the cart.
-
+![Home Page](public/Screenshot.png)
+![Recent Products](public/Screenshot1.png)
+![Sale Products](public/Screenshot2.png)
 3. Cart
-You can view all products in your cart by navigating to the cart using the top bar cart icon button. There you can see all the products, remove products, and view the total value on the right-hand side.
+You can view all products in your cart by navigating to the cart using the top bar cart icon button. There you can see all the products, remove products, and view the total value on the right-hand side. And also you can short product by low and high price.
+![Cart Page](public/Screenshot3.png)

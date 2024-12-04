@@ -70,7 +70,7 @@ const Cart = () => {
           
            return ( <Col lg={4} key={product.key}>
               <div className="content">
-                <span className='close'onClick={() => remove(product.key)}><CloseCircleOutlined /></span>
+                <span className='close'onClick={() => remove(product.key)}><CloseCircleOutlined  style={{ fontSize: '25px' }}/></span>
                 <div className="image">
                   <img src={product.image} alt={product.title} />
                 </div>
@@ -92,11 +92,11 @@ const Cart = () => {
           <Col md={6}>
             <div className='costCalculation' >
 
-              <h3> total amount: <span>${totalPrice}</span></h3>
-              <h3> shipping cost:<span> ${shippingPrice}</span></h3>
+              <h3> Total Amount: <span className='totalPrice'>${totalPrice}</span></h3>
+              <h3> Shipping Cost:<span className='totalPrice'> ${shippingPrice}</span></h3>
               <h3> Discount: <span>-$ {discount}</span></h3>
-              <h3> Tax:<span> ${tax}</span></h3>
-              <h3> Estimated Total:<span>${totalPrice+shippingPrice+tax-discount} </span></h3>
+              <h3> Tax:<span className='totalPrice'> ${tax}</span></h3>
+              <h3> Estimated Total:<span className='totalPrice'>${totalPrice+shippingPrice+tax-discount} </span></h3>
             </div>
           </Col>
         </Row>

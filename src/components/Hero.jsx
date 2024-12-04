@@ -1,22 +1,32 @@
 import { Col, Row } from 'antd';
 import { Carousel } from 'antd';
+import { images } from '../assets/data';
 
-// import carousel_1 from '../assets/images/carousel-1.webp';
-import carousel_1 from '../assets/images/black-friday.avif';
-import carousel_2 from '../assets/images/carousel-2.jpg';
+import {TruckFilled ,CustomerServiceFilled,MoneyCollectFilled } from '@ant-design/icons';
+
+
 
 const Hero = () => {
   return (
-    <>
+    <div className='heroBlock '>
         <Row gutter={[24, 24]}>
             {/* Carousel */}
             <Col xs={24} md={18}>
                 <Carousel autoplay>
                     <div>
-                        <img src={carousel_1} alt="" />
+                        <img src={images.carousel} alt="" />
                     </div>
                     <div>
-                    <img src={carousel_2} alt="" />
+                        <img src={images.banner2} alt="" />
+                    </div>
+                    <div>
+                        <img src={images.estore} alt="" />
+                    </div>
+                    <div>
+                        <img src={images.estore2} alt="" />
+                    </div>
+                    <div>
+                        <img src={images.banner2} alt="" />
                     </div>
                 </Carousel>
             </Col>
@@ -25,7 +35,7 @@ const Hero = () => {
                 <div className="heroBlocks">
                     <div className="holder">
                         <div className="icon">
-                            <i className='fa-solid fa-truck'></i>
+                        <TruckFilled />
                         </div>
                         <div className="content">
                             <h3>Free Shipping &ap; Return </h3>
@@ -36,7 +46,7 @@ const Hero = () => {
                 <div className="heroBlocks">
                     <div className="holder">
                         <div className="icon">
-                            <i className='fa-solid fa-sack-dollar'> </i>
+                        <CustomerServiceFilled />
                         </div>
                         <div className="content">
                             <h3>24 Hour Support </h3>
@@ -47,7 +57,7 @@ const Hero = () => {
                 <div className="heroBlocks">
                     <div className="holder">
                         <div className="icon">
-                            <i className='fa-solid fa-dollar'> </i>
+                        <MoneyCollectFilled />
                         </div>
                         <div className="content">
                             <h3>Money Back Guarantee </h3>
@@ -57,7 +67,7 @@ const Hero = () => {
                 </div>
             </Col>
         </Row>
-    </>
+    </div>
   )
 }
 

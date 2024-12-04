@@ -34,6 +34,7 @@ const ProductCategories = () => {
                             <img src={productCategory.image} alt={productCategory.title} />
                         </div>
                         <h3>{productCategory.title}</h3>
+                        
                     </div>
                     </Col>
                 ))

@@ -15,7 +15,7 @@
   h4,
   h5,
   h6 {
-    font-family: 'Merriweather', serif;
+    font-family: roboto;
   }
   
   img {
@@ -77,6 +77,27 @@
     align-items: end;
     justify-content: center; */
 
+  }
+  .close{
+    color: rgb(209, 29, 29);
+    position: absolute;
+    right: 5px;
+    top:-10px;
+  }
+
+  .totalPrice{
+    color: rgb(52, 179, 52);
+    font-size: 1rem;
+  }
+  .productTitle{
+    font-size: 1rem;
+    font-family: roboto;
+    padding-top: 0.3rem;
+  }
+  .productDesc{
+    font-size: 0.7rem;
+    font-family: roboto;
+    padding-top: 0.1rem;
   }
 
   /* topbar */
@@ -303,16 +324,20 @@
   
   /* products */
   .products .image {
-    text-align: center;
-    
+    text-align: center;    
+ 
+    /* object-fit: cover; */
+
   }
   .image img{
     border-radius: 0.5rem;
+    height: 10rem;
   }
   
   .products .price {
     margin: 0 0 20px;
     font-size: 20px;
+    font-family: roboto;
   }
   
   .products h3 {

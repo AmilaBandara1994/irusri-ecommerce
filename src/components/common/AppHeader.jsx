@@ -7,7 +7,7 @@ import { useAuth } from '../../context/AuthContext';
 
 
 const AppHeader = () => {
-  const { isLoggedIn,logout, authUser,setIsLoggedIn } = useAuth();
+  const { isLoggedIn,logout, authUser } = useAuth();
 
   const logOut = () => {
     logout();

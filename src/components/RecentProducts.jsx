@@ -49,7 +49,8 @@ const RecentProducts = () => {
                             <div className="image">
                                 <img src={product.image} alt="product" />
                             </div>
-                            <h3>{product.title}</h3>
+                            <h3 className='productTitle'>{product.title}</h3>
+                            <p className='productDesc'>{product.description}</p>
                             <div className="price">
                                 ${product.price}
                             </div>
